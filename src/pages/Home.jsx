@@ -9,7 +9,7 @@ function Home() {
     const fetchListings = async () => {
       try {
         console.log("Request bhej rahe...");
-        const response = await API.get("/api/listings");
+        const response = await API.get("/listings");
 
         console.log("Response aaya:", response);
         setListings(response.data);
