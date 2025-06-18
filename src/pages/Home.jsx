@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../services/api";
-import ListingCard from "../components/tempCard";
+import ListingCard from "../components/listingCard";
 
 function Home() {
   const [listings, setListings] = useState([]);
@@ -8,10 +8,10 @@ function Home() {
   useEffect(() => {
     const fetchListings = async () => {
       try {
-        console.log("Request bhej rahe...");
+        // console.log("Request bhej rahe...");
         const response = await API.get("/listings");
 
-        console.log("Response aaya:", response);
+        // console.log("Response aaya:", response);
         setListings(response.data);
       } catch (error) {
         console.error("Failed to fetch listings", error);
